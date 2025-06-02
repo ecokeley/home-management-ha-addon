@@ -9,7 +9,7 @@ startup: application
 boot: auto
 map:
   - config:rw
-image: ghcr.io/ecokeley/home-management:1.0
+image: ghcr.io/ecokeley/home-management
 host_dbus: true
 devices:
   - /dev/dri:/dev/dri

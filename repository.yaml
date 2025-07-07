@@ -1,0 +1,4 @@
+name: Home Management Add-on
+description: "Custom add-on for displaying Home Assistant on HDMI touchscreen"
+url: "https://github.com/ecokeley/home-management-ha-addon"
+maintainer: "Erik Cokeley"

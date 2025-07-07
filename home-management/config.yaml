@@ -1,0 +1,23 @@
+name: Home Management
+version: "1.1"
+slug: home_management
+description: Containerized desktop with X11 server for Home Assistant kiosk
+maintainer: Erik Cokeley
+arch:
+  - aarch64
+startup: application
+boot: auto
+ports:
+  "5900/tcp": 5900
+map:
+  - config:rw
+host_network: true
+full_access: true
+devices:
+  - /dev/dri:/dev/dri
+  - /dev/fb0:/dev/fb0
+  - /dev/tty0:/dev/tty0
+  - /dev/tty1:/dev/tty1
+  - /dev/input:/dev/input
+map:
+  - /tmp/.X11-unix:/tmp/.X11-unix:rw

@@ -1,23 +1,17 @@
 name: Home Management
-version: "1.1"
-slug: home_management
-description: Containerized desktop with X11 server for Home Assistant kiosk
-maintainer: Erik Cokeley
-arch:
-  - aarch64
-startup: application
-boot: auto
-ports:
-  "5900/tcp": 5900
-map:
-  - config:rw
-host_network: true
-full_access: true
-devices:
-  - /dev/dri:/dev/dri
-  - /dev/fb0:/dev/fb0
-  - /dev/tty0:/dev/tty0
-  - /dev/tty1:/dev/tty1
-  - /dev/input:/dev/input
-map:
-  - /tmp/.X11-unix:/tmp/.X11-unix:rw
+         version: "1.0"
+         slug: home_management
+         description: Configures desktop and Home Assistant interface on HDMI
+         maintainer: Erik Cokeley
+         arch:
+           - aarch64
+         startup: application
+         boot: auto
+         map:
+           - config:rw
+         image: ghcr.io/ecokeley/home-management:1.0
+         host_dbus: true
+         devices:
+           - /dev/dri:/dev/dri
+         environment:
+           DISPLAY: ":0"

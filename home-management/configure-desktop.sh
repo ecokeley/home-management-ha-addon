@@ -36,7 +36,5 @@ chromium-browser \
     --remote-debugging-port=9222 \
     http://homeassistant.local:8123 &
 
-# Keep script running
-while true; do
-    sleep 60
-done
+# Keep script running efficiently without repeated wake-ups
+exec sleep infinity
